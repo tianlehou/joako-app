@@ -1,0 +1,41 @@
+<!-- ../components/scroll-buttons.html -->
+<section class="scroll">
+  <div class="scroll-container">
+    <div class="scroll-btn display-center">
+        <a id="scrollToTopBtn" class="bi bi-arrow-up-square btn-arrow"></a>
+      <a id="scrollToBottomBtn" class="bi bi-arrow-down-square btn-arrow"></a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .scroll {
+    position: fixed;
+    bottom: 10px; /* Puedes ajustar este valor para mover el contenedor hacia abajo */
+    right: 15px; /* Coloca el contenedor en la esquina superior derecha */
+    z-index: 1000; /* Asegura que el contenedor esté sobre otros elementos de la página */
+    width: fit-content;
+    justify-content: center;
+  }
+
+  .scroll-container {
+    background-color: white;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+  }
+  
+  .scroll-btn a {
+    color: #333;
+    border: none;
+    font-size: 2em;
+    padding: 10px;
+  }
+
+  #scrollToTopBtn {
+    margin: -10px 0 -15px 0;
+  }
+#scrollToBottomBtn {
+  margin: -15px 0 -10px 0;
+}
+
+</style>

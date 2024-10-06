@@ -1,0 +1,237 @@
+@import 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap';
+@import './table.css';
+/* @import './table-02.css'; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+body {
+    background-color: white;
+    height: 100%;
+}
+
+:root {
+    --clr-primary: #4a90e2;
+    --clr-secondary: #7ed321;
+    --clr-bg-dark: #121212;
+    --clr-bg-light: #1e1e1e;
+    --clr-text: #e0e0e0;
+    --clr-error: #ff4f4f;
+    --clr-success: #4cff4c;
+    --clr-neon-blue: #4a90e2;
+    --clr-neon-green: #7ed321;
+    --clr-input-border: linear-gradient(90deg, #4a90e2, #7ed321);
+}
+
+.border-red {
+    border: 1px solid red;
+}
+
+.button {
+    display: inline-block;
+    padding: .75em 1.5em;
+    background: #666;
+    color: #fff;
+    border-radius: .5em;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 20px;
+}
+
+.display-center {
+    display: grid;
+    place-items: center;
+}
+
+.display-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.display-none {
+    display: none;
+}
+
+.img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.mg-05em {
+    margin: .5em;
+}
+
+.select-hidden {
+    display: none;
+    /* Ocultar el select */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-nodeco {
+    text-decoration: none;
+}
+
+/* Header */
+header {
+    padding: 20px;
+}
+
+.input-group {
+    width: 250px;
+    margin: 1em;
+}
+#searchInput {
+    width: 100px;
+    height: 40px;
+}
+#searchButton {
+    width: auto;
+    height: 40px;
+    padding: 0 10px 0 10px;
+}
+
+/* Middle section */
+#middleSection {
+    padding: 20px;
+    margin: 0;
+    width: 300px;
+}
+
+#middleSection ion-icon{
+    font-size: 2em;
+    color: var(--clr-secondary);
+    z-index: 5;
+}
+h1 {
+    font-weight: 500;
+    font-size: 1.2em;
+    margin: 15px;
+    text-align: center;
+    color: #333;
+}
+
+
+
+/*===== ===== ===== Card ===== ===== =====*/
+.card {
+    width: 380px;
+    padding: 20px;
+    border: 2px, solid #ccc;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.card img,
+.photo {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h2 {
+    margin-top: auto;
+    font-size: 20px;
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
+}
+
+.card-2 {
+    max-width: 600px;
+    padding: 20px;
+    margin: 20px;
+    border: 2px, solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal */
+/* Modal */
+#confirmationModal {
+    display: none;
+    position: fixed;
+    top: 50px;
+
+}
+
+.modal {
+    background-color: #fff;
+    height: 80%;
+}
+
+.modal .modal-header {
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+.modal .modal-content {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-align: center;
+    padding: 1em;
+    margin: 0;
+}
+
+.modal-title {
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #007bff;
+}
+
+.modal #confirm-delete {
+    background-color: red;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.modal #cancel-delete {
+    background-color: dodgerblue;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.modal .footer {
+    margin-top: 0px;
+    background-color: transparent;
+}
+
+/* Main */
+.main-content {
+    display: flex;
+    margin: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    /* padding: 2rem 2rem; */
+    overflow: auto;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+    overflow-y: auto;
+    display: block;
+    background-color: white;
+}
+
