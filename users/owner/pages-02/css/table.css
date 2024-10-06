@@ -1,0 +1,161 @@
+/* Estilo para ocultar el contenido de la tabla */
+.oculto {
+    display: none;
+}
+
+/* Estilos de tabla */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* Permitir que la tabla ajuste el ancho según el contenido */
+}
+
+.tabla-personas tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tabla-personas tr:hover {
+    background-color: #ddd;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: dodgerblue;
+}
+
+a:hover {
+    color: #ff9900;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+
+/* Ajuste de celdas: Ancho ajustado al contenido con 10px adicionales a cada lado */
+table th,
+table td {
+    padding: 8px 10px; /* Añade 10px a la izquierda y derecha del contenido */
+    border: 1px solid #ddd;
+    text-align: center;
+    white-space: nowrap; /* Evita que el contenido se divida en varias líneas */
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: 500;
+}
+
+/* Ajuste especial para la columna de nombre */
+table td.nombre-columna {
+    white-space: nowrap; /* Asegura que el contenido no se divida en varias líneas */
+    max-width: fit-content; /* Permitir que el ancho se ajuste automáticamente */
+    padding: 8px 20px; /* Añadir 20px de padding a la columna específica si se desea más espacio */
+}
+
+/* Sticky Header y primera columna */
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #a8d5ba !important; /* Color verde suave para el encabezado */
+    color: #1d1d1b !important; /* Color del texto oscuro para que contraste con el fondo verde */
+    z-index: 2;
+}
+
+td:first-child,
+th:first-child,
+td:nth-child(2),
+th:nth-child(2) {
+    position: sticky;
+    left: 0;
+    background-color: #a8d5ba !important; /* Color verde suave para la primera columna */
+    color: #1d1d1b !important; /* Color del texto oscuro para que contraste con el fondo verde */
+    z-index: 1;
+}
+
+th:first-child,
+th:nth-child(2) {
+    z-index: 3;
+}
+
+/* Espaciado en la sección de reglas */
+.section-rules p {
+    margin: 10px 20px;
+}
+
+/* Estilos de botones */
+#delete-board-button {
+    background-color: red;
+}
+
+#downloadToExcel {
+    background-color: green;
+}
+
+/* Footer */
+footer {
+    margin: 0.5em;
+}
+
+/* Estilo para fijar el thead y las primeras columnas */
+.main-container {
+    position: relative;
+    max-height: 600px;
+    overflow: auto;
+}
+
+/* Contenedor del select */
+.select-container {
+    display: inline-block;
+    /* Permite al contenedor ajustarse al contenido */
+}
+
+/* Estilo para el select */
+select {
+    max-width: 10px;
+    padding: 2px 4px;
+    /* Espaciado para mantener el estilo */
+    text-align: center;
+    /* Centra el texto dentro del select */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    /* Fondo claro */
+    font-size: 14px;
+    color: #666;
+    box-sizing: border-box;
+    /* Incluye padding y border en el ancho total */
+}
+
+/* Centra el texto dentro de las celdas y encabezados de la tabla */
+table th,
+table td {
+    text-align: center;
+    /* Centra el texto dentro de celdas y encabezados */
+    padding: 8px;
+    border: 1px solid #ddd;
+    color: #666;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: 500;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+/* Estilo para la fecha */
+.timestamp {
+    color: gray;           /* Color gris para la fecha */
+    font-size: 0.75em;      /* Tamaño de fuente pequeño */
+    font-style: italic;     /* Estilo cursivo */
+    margin-top: 4px;        /* Margen superior para separar del valor de Cobro */
+    display: inline-block;  /* Asegurar que se comporte como un bloque en línea */
+}
+

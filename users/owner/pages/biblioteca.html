@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Modular Head -->
+  <div id="HTMLhead-container"></div>
+  <script src="./components/head.js"></script>
+  <script>
+    const collection = "biblioteca";
+  </script>
+</head>
+
+<body>
+  <!-- Modular Nav-Header -->
+  <div id="nav-header-container"></div>
+  <script defer type="module" src="../components/nav-header/nav-header.js"></script>
+
+  <!-- Imagen Box -->
+  <div class="img-container display-center">
+    <div class="card-2 bg-white">
+      <img class="img" src="https://imgvb.com/images/2024/04/14/81a3769d61387909d30cbb365495f4cf.jpg" alt="img" />
+    </div>
+  </div>
+
+  <!-- Modular Rules Section -->
+  <div data-include-html="../components/includeHTML/rules.html"></div>
+
+  <!-- Middle Section -->
+  <section class="display-center">
+    <div id="middleSection" class="display-center">
+      <div class="display-flex-center">
+        <h1>Librería de Personal</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modular - Main Content -->
+  <div id="main-content-container"></div>
+  <script src="../components/main-content.js"></script>
+
+  <!-- Modular - Others Scripts -->
+  <script src="../assets/js/script.js"></script>
+  <!-- Main Script -->
+  <script src="./script-pages-01.js" defer type="module"></script>
+
+</body>
+
+<footer class="display-flex-center">
+  <p>©2024 Cloud Service</p>
+</footer>
+
+</html>
