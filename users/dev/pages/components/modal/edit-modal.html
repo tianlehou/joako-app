@@ -1,0 +1,146 @@
+<!-- Modal para editar usuario -->
+<div id="editModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Editar Usuario</h2>
+      <span id="closeEditModal" class="bi bi-x-circle close" data-bs-dismiss="modal"></span>
+    </div>
+    <form id="editForm">
+      <div class"display-center">
+        <label for="editUnidad">Unidad</label>
+        <input type="text" id="editUnidad" name="unidad" required>
+    
+        <label for="editPlaca">Placa</label>
+        <input type="text" id="editPlaca" name="placa" required>
+    
+        <label for="editNombre">Nombre</label>
+        <input type="text" id="editNombre" name="nombre" required>
+    
+        <label for="editCedula">Cédula</label>
+        <input type="text" id="editCedula" name="cedula" required>
+    
+        <label for="editWhatsapp">WhatsApp</label>
+        <input type="text" id="editWhatsapp" name="whatsapp" required>
+    
+        <div class="display-flex-center">
+          <button type="button" id="saveEditButton">Guardar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<style>
+  /* Estilos del modal para editar usuario */
+#editModal {
+    display: none; /* Ocultar por defecto */
+    position: fixed; 
+    z-index: 9999; /* Colocarlo sobre otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro transparente */
+    backdrop-filter: blur(5px); /* Añadir efecto de desenfoque */
+}
+
+.modal-content {
+    background-color: var(--clr-bg-dark);
+    margin: 10% auto; /* Centrarse verticalmente */
+    padding: 20px;
+    border: 2px solid var(--clr-primary);
+    width: 80%;
+    max-width: 500px; /* Limitar el ancho máximo */
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 212, 255, 0.5);
+    position: relative;
+    filter: drop-shadow(0px 0px 30px rgba(0, 212, 255, 0.5));
+}
+
+/* Encabezado del modal */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--clr-neon-blue);
+    margin-bottom: -20px;
+}
+
+h2 {
+  color: var(--clr-primary);
+}
+.edit-modal-title {
+    color: var(--clr-primary);
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.close {
+    color: var(--clr-secondary);
+    font-size: 1.8em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.close:hover {
+    color: var(--clr-primary);
+}
+
+/* Estilos del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.display-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#editForm label {
+    font-size: 1.1em;
+    color: var(--clr-text);
+    flex: 1;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--clr-neon-blue);
+    background-color: var(--clr-bg-dark);
+    color: var(--clr-text);
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: var(--clr-neon-green);
+}
+
+button#saveEditButton {
+    background: linear-gradient(45deg, var(--clr-primary), var(--clr-secondary));
+    border: none;
+    border-radius: 10px;
+    color: var(--clr-bg-dark);
+    width: 80%;
+    margin: 20px;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button#saveEditButton:hover {
+    background: linear-gradient(45deg, var(--clr-secondary), var(--clr-primary));
+}
+
+</style>

@@ -1,0 +1,37 @@
+/* Estilo para fijar el thead en la parte superior: */
+.main-container {
+    position: relative;
+    max-height: 600px;
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #a8d5ba !important; /* Color verde suave para el encabezado */
+    color: #1d1d1b !important; /* Color del texto oscuro para que contraste con el fondo verde */
+    z-index: 2;
+}
+
+td:nth-child(2),
+th:nth-child(2) {
+    position: sticky;
+    left: 0;
+    background-color: #a8d5ba !important; /* Color verde suave para el encabezado */
+    color: #1d1d1b !important; /* Color del texto oscuro para que contraste con el fondo verde */
+    z-index: 1;
+}
+
+th:first-child {
+    z-index: 3;
+}
+
+.table {
+    width: 100%;
+    table-layout: fixed;
+}
