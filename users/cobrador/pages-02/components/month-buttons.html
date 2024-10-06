@@ -1,0 +1,47 @@
+<!-- week-buttons.html -->
+<section class="month-buttons display-center">
+  <div class="display-flex-center">
+    <a class="button" href="./month-00.html">00</a>
+  </div>
+  <div class="display-flex-center">
+    <a class="button" href="./month-01.html">Ene</a>
+    <a class="button" href="./month-02.html">Feb</a>
+    <a class="button" href="./month-03.html">Mar</a>
+    <a class="button" href="./month-04.html">Abr</a>
+    <a class="button" href="./month-05.html">May</a>
+    <a class="button" href="./month-06.html">Jun</a>
+  </div>
+  <div class="display-flex-center">
+    <a class="button" href="./month-07.html">Jul</a>
+    <a class="button" href="./month-08.html">Ago</a>
+    <a class="button" href="./month-09.html">Sep</a>
+    <a class="button" href="./month-10.html">Oct</a>
+    <a class="button" href="./month-11.html">Nov</a>
+    <a class="button" href="./month-12.html">Dic</a>
+  </div>
+</section>
+
+<style>
+  .month-buttons .button {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    margin: 3px;
+    padding: 0px;
+    background-color: #999;
+    font-weight: 500;
+  }
+
+  .month-buttons .button:hover {
+    background-color: green;
+  }
+
+  .month-buttons .button.active {
+    background-color: green;
+    color: white;
+  }
+</style>

@@ -1,0 +1,88 @@
+<!-- nav-header.html -->
+<header class="nav-header">
+    <section class="dropdown-section">
+        <!-- Dropdown - Tableros -->
+        <div class="dropdown">
+            <a class="button bi bi-list" data-bs-toggle="dropdown" id="menu-icon"></a>
+            <ul class="dropdown-menu">
+                <li>Menú</li>
+                <li><a class="dropdown-item" href="../pages/biblioteca.html">* Biblioteca</a></li>
+                <li><a class="dropdown-item" href="../pages-02/month-00.html">* Cobros de zarpe</a></li>
+                <li><a class="dropdown-item" href="#">* Reglas Generales (inactivo)</a></li>
+                <li><a id="logout" class="dropdown-item" href="#">* Cerrar sesión</a></li>
+            </ul>
+        </div>
+    </section>
+    <h3 class="logo">Cobrador</h3>
+</header>
+
+<style>
+    :root {
+        --clr-primary: #4a90e2;
+        --clr-secondary: #7ed321;
+        --clr-bg-dark: #121212;
+        --clr-bg-light: #1e1e1e;
+        --clr-text: #e0e0e0;
+        --clr-error: #ff4f4f;
+        --clr-success: #4cff4c;
+        --clr-neon-blue: #4a90e2;
+        --clr-neon-green: #7ed321;
+        --clr-input-border: linear-gradient(90deg, #4a90e2, #7ed321);
+    }
+
+    .nav-header {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 5em;
+        z-index: 4;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        box-shadow: 0 0 1rem 0 rgba(29, 15, 15, 0.3);
+    }
+
+    .logo {
+        color: var(--clr-primary);
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .dropdown-section {
+        list-style-type: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    .dropdown-section .button {
+        width: 50px;
+        text-decoration: none;
+        color: #1c1c1c;
+        background-color: var(--clr-secondary);
+        border-radius: 50px;
+        justify-items: center;
+        box-shadow: 0 0 1rem 0 rgba(29, 15, 15, 0.3);
+        padding: 0px;
+        font-size: 2em;
+        font-weight: 500;
+        text-align: center;
+        transition: background-color 0.5s ease, box-shadow 0.5s ease;
+        /* Transición aplicada al estado inicial */
+    }
+
+    .dropdown-section .button:hover {
+        box-shadow: 0 0 1rem 0 rgba(29, 15, 15, 0.5);
+        background-color: var(--clr-success);
+    }
+
+    .dropdown ul {
+        padding: 0 20px 0 20px;
+    }
+
+    .dropdown li {
+        font-weight: 500;
+        text-align: center;
+    }
+</style>
