@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Modular Head -->
+  <div id="HTMLhead-container"></div>
+  <script src="../components/head.js"></script>
+  <script data-collection="cobros-de-zarpe-01"></script>
+</head>
+
+<body>
+  <!-- Modular Nav-Header -->
+  <div id="nav-header-container"></div>
+  <script defer type="module" src="../components/nav-header/nav-header.js"></script>
+
+  <!-- Contenedor para los botones de desplazamiento -->
+  <div id="scroll-buttons-container"></div>
+  <script src="../components/scroll-buttons/scroll-buttons.js"></script>
+
+  <!-- Modular Rules Section -->
+  <div data-include-html="../components/includeHTML/rules.html"></div>
+
+  <!-- Middle Section -->
+  <section class="display-center">
+    <div id="middleSection" class="display-center">
+      <div class="display-flex-center">
+        <h1>Librería de Personal</h1>
+        <ion-icon name="add-circle-outline" data-bs-toggle="modal" data-bs-target="#newRegisterModal"
+          id="showModalButton"></ion-icon>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- Modular - Months Section -->
+  <div id="month-buttons-container"></div>
+  <script src="./components/month-buttons.js"></script>
+
+  <!-- Search Function: Input + Button -->
+  <section class="display-center">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Buscar" id="searchInput" />
+      <button class="btn bg-green" type="button" id="searchButton">Buscar</button>
+    </div>
+  </section>
+
+  <!-- Modular - Main Content -->
+  <div id="main-content-pages-02-container"></div>
+  <script src="./components/main-content-pages-02.js" defer type="module"></script>
+
+  <!--=== ===== Download to Excel Buttons ===== ===-->
+  <section class="display-flex-center">
+    <button class="button" id="downloadToExcel">
+      <label>Descargar a Excel</label>
+    </button>
+  </section>
+
+  <!-- Footer -->
+  <footer class="display-flex-center">
+    <p>©2024 Cloud Service</p>
+  </footer>
+
+  <!-- Modular - New Register Modal -->
+  <div id="new-register-modal-container"></div>
+  <script src="../components/new-register-modal.js"></script>
+
+  <!-- Contenedor para el modal de edición y de confirmación -->
+  <div id="edit-nombre-modal-container"></div>
+  <div id="edit-nombre-confirmation-modal-container"></div>
+
+  <!-- Modular - Update Select Confirmation Modal -->
+  <div id="update-select-confirmation-modal-container"></div>
+  <script src="./components/modal/updateSelectConfirmationModal.js"></script>
+
+  <!-- Modular - Others Scripts -->
+  <script src="../assets/js/script.js"></script>
+  <!-- Main Script -->
+  <script src="./script-pages-02.js" defer type="module"></script>
+</body>
+
+</html>
