@@ -1,0 +1,100 @@
+<!-- Pagination -->
+<section class="title display-flex-center">
+    <div class="title-container display-center">
+        <div class="pagination display-flex-center">
+            <ul class="display-flex-center">
+                <li class="pageNumber prev-page">
+                    <a href="#" id="prevPage">
+                        < </a>
+                </li>
+                <li class="pageNumber next-page">
+                    <a href="#" id="nextPage"> > </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<style>
+    .title-container {
+        margin: -20px 0 -20px 0;
+    }
+
+    .title input,
+    .title select {
+        width: 130px;
+        height: 30px;
+        margin: 5px;
+        border: 1px solid #333;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .title button {
+        margin: 5px;
+        padding: 0;
+        width: 130px;
+        height: 30px;
+        background-color: green;
+        color: white;
+    }
+
+    .title a {
+        font-size: 1.5em;
+        font-weight: 500;
+        border: 1px solid #999;
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+    }
+
+    .pagination ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 10px;
+        height: 40px;
+        margin-top: 18px;
+    }
+
+    ul li {
+        margin: 0 5px;
+        /* Ajusta el espaciado entre los elementos */
+    }
+
+    ul li.pageNumber {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        font-size: 0.8em;
+        font-weight: 500;
+    }
+
+    ul li a {
+        display: block;
+        color: #333;
+        font-weight: 500;
+        border-radius: 50%;
+        text-decoration: none;
+    }
+
+    ul li.pageNumber:hover a,
+    ul li.pageNumber.active a {
+        background: #333;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    ul li.pageNumber.active a {
+        background: green;
+        color: #fff;
+    }
+</style>

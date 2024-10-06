@@ -1,0 +1,283 @@
+/* login.css */
+@import url(./assets/css/toggle-password.css);
+@import url(./assets/css/validation.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
+:root {
+    --clr-primary: #4a90e2;
+    --clr-secondary: #7ed321;
+    --clr-bg-dark: #121212;
+    --clr-bg-light: #1e1e1e;
+    --clr-text: #e0e0e0;
+    --clr-error: #ff4f4f;
+    --clr-success: #4cff4c;
+    --clr-neon-blue: #4a90e2;
+    --clr-neon-green: #7ed321;
+    --clr-input-border: linear-gradient(90deg, #4a90e2, #7ed321);
+}
+
+body {
+    min-height: 100vh;
+    background: var(--clr-bg-dark);
+    color: var(--clr-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Ajustar según sea necesario */
+    height: auto; /* Para que el tamaño de la tarjeta sea dinámico */
+    padding: 40px 20px; /* Aumentar el padding si es necesario */
+    background: transparent;
+    border-radius: 30px;
+    filter: drop-shadow(0px 0px 30px rgba(0, 212, 255, 0.5));
+    transition: 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Ensure card is above other elements */
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, var(--clr-neon-blue), var(--clr-neon-green));
+    z-index: -1;
+    filter: blur(10px);
+    animation: rotate-border 6s linear infinite;
+    transition: 0.3s ease;
+}
+
+.card::after {
+    content: '';
+    background-color: var(--clr-bg-dark);
+    position: absolute;
+    z-index: 1;
+    height: 98%;
+    width: 98%;
+    top: 1%;
+    left: 1%;
+    border-radius: 28px;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    filter: drop-shadow(0px 0px 30px rgba(0, 212, 255, 1));
+}
+
+@keyframes rotate-border {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.title {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+}
+
+#carousel-text {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--clr-primary);
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    animation: fade 10s ease-in-out infinite;
+}
+
+@keyframes fade {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.input-box {
+    position: relative;
+    margin: 30px 0;
+    z-index: 2;
+}
+
+.input-box input {
+    width: 100%;
+    height: 45px;
+    background: var(--clr-bg-dark);
+    border: 2px solid var(--clr-neon-blue);
+    outline: none;
+    border-radius: 10px;
+    font-size: 1em;
+    color: var(--clr-text);
+    padding: 0 40px;
+    transition: border 0.3s ease;
+}
+
+.input-box input:focus {
+    border: 2px solid var(--clr-neon-green);
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    color: var(--clr-neon-blue);
+    pointer-events: none;
+    transition: 0.3s ease;
+    background: var(--clr-bg-dark);
+    padding: 0 5px;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -10px;
+    font-size: 0.8em;
+    color: var(--clr-neon-green);
+}
+
+/* Icons */
+.input-box #mail-icon,
+.input-box #lock-icon {
+    position: absolute;
+    left: 15px;
+    top: 8px;
+    font-size: 1.2em;
+    color: var(--clr-primary);
+    z-index: 2;
+}
+
+.input-box .toggle-password {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    color: var(--clr-neon-green);
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+    z-index: 2;
+}
+
+.input-box .toggle-password:hover {
+    color: var(--clr-primary);
+}
+
+.forgot-password {
+    position: relative;
+    text-align: right;
+    margin: -15px 15px 15px 0;
+    color: var(--clr-secondary);
+    cursor: pointer;
+    z-index: 2;
+}
+.forgot-password:hover {
+    color: var(--clr-primary);
+    transition: 0.5s ease-out;
+}
+
+.btn {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 45px;
+    background: linear-gradient(45deg, var(--clr-primary), var(--clr-secondary));
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    color: var(--clr-bg-dark);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, var(--clr-secondary), var(--clr-primary));
+}
+
+.new-user {
+    position: relative;
+    z-index: 2;
+}
+
+.new-user span {
+    color: var(--clr-primary);
+}
+
+.new-user a {
+    color: var(--clr-secondary);
+    size: 5em;
+    text-decoration-line: none;
+}
+
+.error-message {
+    position: relative;
+    z-index: 2;
+    color: var(--clr-error);
+    font-size: 0.9em;
+    margin-top: 0.5em;
+}
+
+.success-message {
+    position: relative;
+    z-index: 2;
+    color: var(--clr-success);
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+.modal-content {
+    background-color: var(--clr-bg-dark);
+}
+
+.modal-header {
+    justify-content: space-between;
+}
+
+.modal-title {
+    color: var(--clr-primary);
+}
+
+.modal .bi-x-circle {
+    font-size: 2em;
+    cursor: pointer;
+    color: var(--clr-secondary);
+}
+
+.modal p {
+    margin: 20px;
+    font-size: 1.2em;
+    font-weight: 300;
+    color: var(--clr-secondary);
+}

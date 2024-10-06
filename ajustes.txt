@@ -1,0 +1,14 @@
+v01.10.08 - 02/10/2024: Filtra datos en biblioteca de
+                        users: Administrador, Cobrador, Propietario, Conductor, Secretario.
+
+
+- Hacer ajustes en los searchfunction
+    los select, edit, delete - No funcionan.
+- al crear nuevo usuario el role se vuelve undefined para admin y cobrador.
+- Agregar un campo de UID en el modal de Edicion, para agregar el UID del usuario.
+    de esta manera, el usuario autenticado solo podra ver su fila de datos.
+    enlazar filterDataByUID.js
+
+
+
+- enlazar updateSelectConfirmationModal.js

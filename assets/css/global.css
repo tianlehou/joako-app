@@ -1,0 +1,31 @@
+:root {
+    --clr-primary: #4a90e2;
+    --clr-secondary: #7ed321;
+    --clr-bg-dark: #121212;
+    --clr-bg-light: #1e1e1e;
+    --clr-text: #e0e0e0;
+    --clr-error: #ff4f4f;
+    --clr-success: #4cff4c;
+    --clr-neon-blue: #4a90e2;
+    --clr-neon-green: #7ed321;
+    --clr-input-border: linear-gradient(90deg, #4a90e2, #7ed321);
+}
+
+.display-center {
+    display: grid;
+    place-items: center;
+}
+
+.display-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.display-none {
+    display: none;
+}
+
+.border-red {
+    border: 1px solid red;
+}
